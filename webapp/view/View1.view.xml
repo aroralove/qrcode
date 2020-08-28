@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.sap.blogs.example.qrcode.controller.View1" xmlns:qr="sdk.qrcode" xmlns:mvc="sap.ui.core.mvc"
+<mvc:View controllerName="com.sap.blogs.example.qrcode.controller.View1" xmlns:cam="sdk.camera" xmlns:qr="sdk.qrcode" xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true" xmlns="sap.m">
 	<Shell id="shell">
 		<App id="app">
@@ -10,6 +10,18 @@
 						</VBox>
 						<VBox class="sapUiLargeMargin">
 							<Label text="QR Code for https://www.sap.com"/>
+						</VBox>
+						<VBox>
+							<Toolbar>
+								<ToolbarSpacer/>
+								<Button id="flipCamera" icon="sap-icon://synchronize" press="onFlipCamera"/>
+							</Toolbar>
+							<FlexBox direction="Column" alignItems="Center" justifyContent="Center">
+								<items>
+									<cam:Camera id="camera" width="350" height="300"></cam:Camera>
+									<Button id="scanButton" text="Scan" type="Emphasized" press="onClickScan" />
+								</items>
+							</FlexBox>
 						</VBox>
 					</content>
 				</Page>
