@@ -1,0 +1,19 @@
+<mvc:View controllerName="com.sap.blogs.example.qrcode.controller.View1" xmlns:qr="sdk.qrcode" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="QR Code Generation">
+					<content>
+						<VBox class="sapUiLargeMargin">
+							<qr:QRCode code="https://www.sap.com" colorDark="#000000" width="250px" height="250px"/>
+						</VBox>
+						<VBox class="sapUiLargeMargin">
+							<Label text="QR Code for https://www.sap.com"/>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
